@@ -18,7 +18,7 @@ Pokedex-App is web app about pokemon using PokeAPI v2.
     Run project with “npm run dev”
     project running at url “localhost:3000”
 
-## Features of Pokedex App
+## Features
 
     Home Page : show pokemons and detail pokemon.
     Detail Pokemon Page : More detail of Pokemon.

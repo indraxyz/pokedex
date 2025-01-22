@@ -220,33 +220,34 @@ const Pokemon = () => {
         </div>
         <div className="flex justify-between items-center">
           {/* filter */}
-          <div className="flex items-center space-x-6 ">
-            <div className="flex items-center space-x-1">
-              <IconButton className="" onClick={() => showFav(!favFilter)}>
-                {favFilter ? (
-                  <FavoriteIcon className="text-red-700" />
-                ) : (
-                  <FavoriteBorderRounded className="text-red-700" />
-                )}
-              </IconButton>
-              <Typography variant="body1">Favourites</Typography>
-            </div>
-            <div className="h-[40px]  bg-gray-300 w-[1px]"></div>
-            <div>
-              <TextField
-                id="standard-basic"
-                label="Search Pokemons"
-                variant="standard"
-                placeholder="pokemon's name"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                onKeyDown={(e) => searchPokemons(e.key)}
-              />
-            </div>
+          {/* <div className="flex items-center space-x-6 "> */}
+          {/* <div className="h-[40px]  bg-gray-300 w-[1px]"></div> */}
+          <div>
+            <TextField
+              id="standard-basic"
+              label="Search Pokemons"
+              variant="standard"
+              placeholder="pokemon's name"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              onKeyDown={(e) => searchPokemons(e.key)}
+            />
           </div>
+          {/* </div> */}
           <div>
             {/* reset */}
-            <IconButton className="" onClick={() => resetPokemons()}>
+            <IconButton
+              className=""
+              onClick={() => showFav(!favFilter)}
+              title="Favorites"
+            >
+              {favFilter ? (
+                <FavoriteIcon className="text-red-700" />
+              ) : (
+                <FavoriteBorderRounded className="text-red-700" />
+              )}
+            </IconButton>
+            <IconButton title="Filter Reset" onClick={() => resetPokemons()}>
               <RestartIcon />
             </IconButton>
           </div>
