@@ -25,7 +25,10 @@ const PokemonCard = (props: Props) => {
   const idPokemon = Number(p.url.split("/")[6]);
   return (
     <Grid size={{ xs: 2, sm: 4, md: 4 }}>
-      <Card elevation={2} className="hover:shadow-xl rounded-xl">
+      <Card
+        elevation={2}
+        className="hover:shadow-xl rounded-xl w-full min-h-56 sm:min-h-80"
+      >
         <IconButton
           className="m-1 absolute z-10"
           onClick={() => addToFav(idPokemon)}
